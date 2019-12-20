@@ -1,12 +1,12 @@
 import requests as r
 import cv2
-counter=1077
+counter=0
 with open('./listFlickr.txt','r') as f:
     for line in f:
         if(line[0:7]!="http://"):
             line="http://"+line
         try:
-            a=r.get("http://"+line,timeout=(2, 3))
+            a=r.get(line,timeout=(2, 3))
         except Exception as e:
             if(e==r.exceptions.ConnectTimeout):
                 print('timeout has been reach')
@@ -19,7 +19,7 @@ with open('./listFlickr.txt','r') as f:
             print('not-allowed headers')
             continue
         if(a.headers['content-type']=="image/jpeg"):
-            filename="./cats/"+str(counter)+"."+line.split('.')[-1:][0].rstrip('\n')
+            filename="./cats/bad/"+str(counter)+"."+line.split('.')[-1:][0].rstrip('\n')
             new = open(filename,"wb")
             new.write(a.content)
             new.close()
