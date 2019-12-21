@@ -24,7 +24,7 @@ with open('./listFlickr.txt','r') as f:
             new.write(a.content)
             new.close()
             img = cv2.imread(filename,cv2.IMREAD_GRAYSCALE)
-            img = cv2.resize(img, (100,100), interpolation = cv2.INTER_AREA)
+            #img = cv2.resize(img, (100,100), interpolation = cv2.INTER_AREA)
             cv2.imwrite(filename,img)
 
             counter+=1

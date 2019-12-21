@@ -1,0 +1,2 @@
+E:\opencv\build\x64\vc14\bin\opencv_traincascade.exe -data E:\python\haarCascade_cats\haarcascade -vec E:\python\haarCascade_cats\samples.vec -bg E:\python\haarCascade_cats\cats\bad.txt -numStages 20 -minHitRate 0.995 -maxFalseAlarmRate 0.6 -numPos 1800 -numNeg 1350 -w 25 -h 25 -mode ALL -precalcValBufSize 3072 -precalcIdxBufSize 3072
+@pause

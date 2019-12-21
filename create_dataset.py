@@ -12,7 +12,7 @@ if(len(args)!=4):
 	print('#count=последняя цифра файла в папке')
 	print('#file=название файла с датасетом')
 	print('#type=neg/pos')
-	print('#path=путь до папки с фото ./asd/aaa/')
+	print('#path=путь до папки с фото good\\\\files.*')
 else:
 	counter=int(args['count'])+1
 	file=open(args['file'],'w')
@@ -20,4 +20,4 @@ else:
 		if(args['type']=="neg"):
 			file.write(args['path']+str(i)+'.jpg\n')
 		elif(args['type']=="pos"):
-			file.write(args['path']+str(i)+'.jpg 1 100 100 0 0\n')
+			file.write(args['path']+str(i)+'.jpg 1 0 0 99 99\n')
